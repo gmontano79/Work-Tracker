@@ -1,0 +1,48 @@
+
+# Work Tracker - Private data
+*.sqlite3
+*.sqlite
+*.db
+*.sqlite3-*
+*.db-*
+backups/
+backup/
+demo_data/
+local_data/
+Manuales/
+manuals/
+
+# Private documents
+*.pdf
+*.csv
+*.xlsx
+*.xls
+*.docx
+*.pptx
+
+# Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+credentials*.json
+secrets*.json
+
+# Python and system files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.backup
+*.tmp
+*.zip
+
+# Private screenshots and notes
+screenshots_private/
+local_notes/
