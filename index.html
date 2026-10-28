@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work Tracker · Tickets, Projects, Tasks & Notes</title>
+  <meta name="theme-color" content="#162a47">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=1.5.11">
+  <link rel="apple-touch-icon" href="/app-icon.png?v=1.5.11">
+  <link rel="stylesheet" href="/styles.css?v=1.5.11">
+  <script src="/app.js?v=1.5.11" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><img class="brand-logo" src="/app-icon.png?v=1.5.11" alt="Work Tracker icon" width="48" height="48"><div><strong>Work Tracker</strong><small>Personal workspace</small></div></div>
+      <div class="sidebar-identity"><span>WORKSPACE OWNER</span><strong>Gustavo Montano</strong></div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button data-nav="dashboard" class="active"><span class="nav-icon">◫</span> Dashboard</button>
+        <button data-nav="tickets"><span class="nav-icon">▤</span> Tickets</button>
+        <button data-nav="projects"><span class="nav-icon">▦</span> Projects</button>
+        <button data-nav="tasks"><span class="nav-icon">☑</span> Tasks</button>
+        <button data-nav="notes"><span class="nav-icon">▧</span> Notes Center</button>
+        <button data-nav="manuals"><span class="nav-icon">▤</span> Manuals</button>
+        <button data-nav="calendar"><span class="nav-icon">▦</span> Calendar</button>
+        <button data-nav="reports"><span class="nav-icon">▥</span> Reports & Backups</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="online-dot"></span> Local database <small>Private · Offline-ready</small><small class="sidebar-app-version" id="appVersion">Version: checking server…</small></div>
+    </aside>
+    <div class="content-area">
+      <header class="topbar">
+        <div class="topbar-heading"><span class="topbar-kicker">WORKSPACE</span><strong id="topTitle">Overview</strong></div>
+        <div class="global-search" id="globalSearchContainer" role="search">
+          <label class="visually-hidden" for="globalSearch">Search all tickets, projects, tasks, notes and manuals</label>
+          <span class="global-search-icon" aria-hidden="true">⌕</span>
+          <input id="globalSearch" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="globalSearchResults" autocomplete="off" placeholder="Search across Work Tracker…">
+          <kbd class="global-search-shortcut" aria-hidden="true">Ctrl K</kbd>
+          <div id="globalSearchResults" class="global-search-results" role="listbox" aria-label="Search results" hidden></div>
+        </div>
+        <div class="topbar-right"><span class="local-pill">● LOCAL</span><span id="todayLabel"></span></div>
+      </header>
+      <main id="page" class="page" aria-live="polite"></main>
+    </div>
+  </div>
+  <dialog id="editDialog" class="dialog"><div id="dialogContent"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
